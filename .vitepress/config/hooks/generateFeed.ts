@@ -16,7 +16,7 @@ async function generateFeed(config: SiteConfig, hostname: string) {
 	})
 	const json: Item[] = []
 
-	const posts = await createContentLoader("news/*.md", {
+	const posts = await createContentLoader("news/*/*.md", {
 		excerpt: true,
 		render: true,
 		includeSrc: true,
