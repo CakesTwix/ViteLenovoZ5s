@@ -28,7 +28,7 @@ features:
   - title: Security Patch
     icon: 
         src: /securitypatch.png
-    details: '<p style="color: rgb(0,255,0);">December (2023)</p>'
+    details: January 2024
   
   - title: OTA
     icon: 
@@ -64,13 +64,13 @@ features:
     icon: 
         src: /telegram.png
     linkText: Click for open
-    link: "https://t.me/z5supdates/836"
+    link: "https://t.me/z5supdates/842"
 
   - title: Download from Telegram
     icon: 
         src: /telegram.png
     linkText: Click to download
-    link: "https://t.me/lenovoZ5Sru/951"
+    link: "https://t.me/lenovoZ5Sru/964"
 
   - title: Download from NextCloud
     icon: 
