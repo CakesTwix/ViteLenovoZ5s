@@ -1,10 +1,16 @@
 import { defineConfig } from 'vitepress'
+import generateFeed from "./config/hooks/generateFeed"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Lenovo Z5s",
   description: "List of custom roms for Lenovo Z5s",
   base: '/ViteLenovoZ5s',
+  
+  buildEnd: async (context) => {
+		generateFeed(context, "http://localhost:5173/ViteLenovoZ5s")
+	},
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -27,6 +33,10 @@ export default defineConfig({
           { text: 'OrangeFox', link: '/roms/recovery/ofox' },
           { text: 'PBRP', link: '/roms/recovery/pbrp' },
         ]
+      },
+      {
+        text: "News",
+        link: "/news/",
       },
     ],
 
