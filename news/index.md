@@ -14,8 +14,8 @@ import RssLink from "@theme/components/RssLink.vue";
 
 # News
 
-Test
+### News and firmware updates
 
-RSS Link <RssLink />.
+> <RssLink />
 
 <News />

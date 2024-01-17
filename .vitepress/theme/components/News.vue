@@ -17,7 +17,7 @@ function formatDate(date: string) {
 
 <template>
 	<article
-		v-for="news of newsList"
+		v-for="news of newsList.reverse()"
 		:key="news.url"
 		class="news"
 	>
