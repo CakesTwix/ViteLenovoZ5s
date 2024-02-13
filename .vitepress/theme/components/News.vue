@@ -2,7 +2,7 @@
 import { IconChevronRight } from "@iconify-prerendered/vue-mdi"
 import { data as newsList } from "../data/news.data"
 const dateFormatter = new Intl.DateTimeFormat("en", {
-	dateStyle: "medium",
+	dateStyle: "full",
 	timeZone: "UTC",
 })
 function formatDate(date: string) {
@@ -17,7 +17,7 @@ function formatDate(date: string) {
 
 <template>
 	<article
-		v-for="news of newsList.reverse()"
+		v-for="news of newsList"
 		:key="news.url"
 		class="news"
 	>

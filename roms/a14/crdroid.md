@@ -23,12 +23,12 @@ features:
   - title: Version
     icon: 
         src: /version.png
-    details: '10.0'
+    details: '10.2'
   
   - title: Security Patch
     icon: 
         src: /securitypatch.png
-    details: January 2024
+    details: February 2024
   
   - title: OTA
     icon: 
@@ -55,7 +55,7 @@ features:
     linkText: Click to open
 
   - title: Changelogs
-    link: https://nextcloud.cakestwix.com/s/XcdnzAWr52o9WD5
+    link: news/crdroid.2024.02
     icon: 
         src: /changelog.png
     linkText: Click to open
@@ -64,13 +64,13 @@ features:
     icon: 
         src: /telegram.png
     linkText: Click for open
-    link: "https://t.me/z5supdates/842"
+    link: "https://t.me/z5supdates/847"
 
   - title: Download from Telegram
     icon: 
         src: /telegram.png
     linkText: Click to download
-    link: "https://t.me/lenovoZ5Sru/964"
+    link: "https://t.me/lenovoZ5Sru/970"
 
   - title: Download from NextCloud
     icon: 
@@ -79,6 +79,3 @@ features:
     link: "https://nextcloud.cakestwix.com/s/Myp42zobCa9ioBL?path=%2FcrDroid"
 
 ---
-
-
-

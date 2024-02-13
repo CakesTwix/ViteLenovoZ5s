@@ -10,7 +10,7 @@ export interface News {
 declare const data: News[]
 export { data }
 
-export default createContentLoader("news/*/*.md", {
+export default createContentLoader("news/*.md", {
 	excerpt: true,
 	transform(articles) {
 		return articles
@@ -24,6 +24,5 @@ export default createContentLoader("news/*/*.md", {
 					  url: "/ViteLenovoZ5s" + url,
 					},
 			)
-			.sort((a, b) => a.date.toString().localeCompare(b.date))
 	},
 })

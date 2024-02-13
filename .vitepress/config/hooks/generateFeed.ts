@@ -12,11 +12,11 @@ async function generateFeed(config: SiteConfig, hostname: string) {
 		language: "en",
 		image: `${hostname}/img/logo.png`,
 		favicon: `${hostname}/favicon.ico`,
-		copyright: `2023 - ${new Date().getFullYear()} CakesTwix`,
+		copyright: `2024 - ${new Date().getFullYear()} CakesTwix`,
 	})
 	const json: Item[] = []
 
-	const posts = await createContentLoader("news/*/*.md", {
+	const posts = await createContentLoader("news/*.md", {
 		excerpt: true,
 		render: true,
 		includeSrc: true,
