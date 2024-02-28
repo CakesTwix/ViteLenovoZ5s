@@ -10,14 +10,21 @@ hero:
 
 features:
   - title: crDroid
-    link: /roms/a14/crdroid.md
+    link: /roms/a14/crdroid
     icon: 
         src: /roms-icons/crdroid.png
     details: After-market highly customized Android platform for select devices
     linkText: Click to open
 
+  - title: Project Matrixx
+    link: /roms/a14/matrixx
+    icon: 
+        src: /roms-icons/matrixx.png
+    details: Matrixx is a custom ROM, Based on crDroid Android with extra pinch of Salt.
+    linkText: Click to open
+
   - title: Pixel Experience
-    link: /roms/a14/pe.md
+    link: /roms/a14/pe
     icon: 
         src: /roms-icons/pe.png
     details: PixelExperience is an AOSP based ROM, with Google apps included and all Pixel goodies.
