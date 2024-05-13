@@ -23,12 +23,12 @@ features:
   - title: Version
     icon: 
         src: /version.png
-    details: '10.3.0'
+    details: '10.4.3'
   
   - title: Security Patch
     icon: 
         src: /securitypatch.png
-    details: February 2024
+    details: April 2024
   
   - title: OTA
     icon: 
@@ -38,7 +38,7 @@ features:
   - title: GApps
     icon: 
         src: /gapps.png
-    details: Integrated
+    details: Both (GApps and Vanilla version)
 
   - title: How to Flash
     icon: 
@@ -53,7 +53,7 @@ features:
     linkText: Click to open
 
   - title: Changelogs
-    link: news/matrixx.2024.02
+    link: news/matrixx.2024.04
     icon: 
         src: /changelog.png
     linkText: Click to open
@@ -62,13 +62,13 @@ features:
     icon: 
         src: /telegram.png
     linkText: Click for open
-    link: "https://t.me/z5supdates/849"
+    link: "https://t.me/z5supdates/853"
 
   - title: Download from Telegram
     icon: 
         src: /telegram.png
     linkText: Click to download
-    link: "https://t.me/lenovoZ5Sru/973"
+    link: "https://t.me/lenovoZ5Sru/979"
 
   - title: Download from NextCloud
     icon: 
