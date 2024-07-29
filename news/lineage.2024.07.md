@@ -47,6 +47,7 @@ date: 2024-07-29
 1. MicroG Support
     - [android_frameworks_base](https://github.com/lineageos4microg/docker-lineage-cicd/blob/master/src/signature_spoofing_patches/android_frameworks_base-Android14.patch)
     - [packages_modules_Permission](https://github.com/lineageos4microg/docker-lineage-cicd/blob/master/src/signature_spoofing_patches/packages_modules_Permission-Android14.patch)
+1. [Revert "delete gBn/sConstructorMap"](https://github.com/Octavi-Staging/android_system_libhidl/commit/179f84a5ca9fa1c89c1b14597fb6bdc625dc6955) (For fingerprint)
 
 ## Download
 
