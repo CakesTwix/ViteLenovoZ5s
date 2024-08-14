@@ -28,7 +28,7 @@ features:
   - title: Security Patch
     icon: 
         src: /securitypatch.png
-    details: July 2024
+    details: August 2024
   
   - title: GApps
     icon: 
@@ -55,13 +55,13 @@ features:
     icon: 
         src: /telegram.png
     linkText: Click for open
-    link: "https://t.me/z5supdates/859"
+    link: "https://t.me/z5supdates/863"
 
   - title: Download from Telegram
     icon: 
         src: /telegram.png
     linkText: Click to dowload
-    link: "https://t.me/lenovoZ5Sru/987"
+    link: "https://t.me/lenovoZ5Sru/993"
 
   - title: Download from NextCloud
     icon: 
