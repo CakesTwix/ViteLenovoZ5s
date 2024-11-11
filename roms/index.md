@@ -7,28 +7,33 @@ hero:
 features:
   - title: Android 10
     link: /roms/a10/
-    icon: 
+    icon:
         src: /Q_big.png
-  
+
   - title: Android 11
     link: /roms/a11/
-    icon: 
+    icon:
         src: /R.png
-  
+
   - title: Android 12
     link: /roms/a12/
-    icon: 
+    icon:
         src: /12.webp
-  
+
   - title: Android 13
     link: /roms/a13/
-    icon: 
+    icon:
         src: /13.png
 
   - title: Android 14
     link: /roms/a14/
-    icon: 
+    icon:
         src: /14.svg
+
+  - title: Android 15
+    link: /roms/a15/
+    icon:
+        src: /15.svg
 
 ---
 

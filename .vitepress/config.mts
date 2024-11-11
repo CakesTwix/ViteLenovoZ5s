@@ -6,7 +6,7 @@ export default defineConfig({
   title: "Lenovo Z5s",
   description: "List of custom roms for Lenovo Z5s",
   base: '/ViteLenovoZ5s',
-  
+
   buildEnd: async (context) => {
 		generateFeed(context, "http://localhost:5173/ViteLenovoZ5s")
 	},
@@ -24,6 +24,7 @@ export default defineConfig({
           { text: 'Android 12', link: '/roms/a12/' },
           { text: 'Android 13', link: '/roms/a13/' },
           { text: 'Android 14', link: '/roms/a14/' },
+          { text: 'Android 15', link: '/roms/a15/' },
         ]
       },
       {
