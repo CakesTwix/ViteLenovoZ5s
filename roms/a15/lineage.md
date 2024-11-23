@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "LineageOS"
-  tagline: "Unofficial build, with KernelSU and no MicroG Support (yet)"
+  tagline: "Unofficial build, lock bootloader support, with KernelSU and no MicroG Support (yet)"
   text: "\nFeatures:"
   image:
       alt: Android 15
@@ -55,13 +55,13 @@ features:
     icon:
         src: /telegram.png
     linkText: Click for open
-    link: "https://t.me/z5supdates/871"
+    link: "https://t.me/z5supdates/874"
 
   - title: Download from Telegram
     icon:
         src: /telegram.png
     linkText: Click to dowload
-    link: "https://t.me/lenovoZ5Sru/999"
+    link: "https://t.me/lenovoZ5Sru/1001"
 
   - title: Download from NextCloud
     icon:

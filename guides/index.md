@@ -21,6 +21,11 @@ features:
     details: The most important thing stuff
     linkText: Click to open
     link: /guides/flash14.md
+    
+  - title: Lock on Custom Rom (A15+)
+    details: Yes, lock on Custom Rom
+    linkText: Click to open
+    link: /guides/lock.md
 
 ---
 

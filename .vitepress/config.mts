@@ -47,6 +47,7 @@ export default defineConfig({
           text: 'General instructions',
           items: [
             { text: 'How to unlock device', link: '/guides/unlock.md' },
+            { text: 'How to lock on Custom ROM', link: '/guides/lock.md' },
           ]
         },
         {
