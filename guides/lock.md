@@ -3,7 +3,7 @@
 It's can be very danger for your device. Do backups first!
 :::
 
-1. [Flash avb pub key](https://nextcloud.cakestwix.com/s/XteDzEZrxm8mgf6) to avb_custom_key 
+1. [Flash avb pub key](https://nextcloud.cakestwix.com/s/xmGxp9C5MYdeGyG) to avb_custom_key 
     * `fastboot erase avb_custom_key`
     * `fastboot flash avb_custom_key avb_custom_key.avbpub`
 2. Flash LOS Recovery

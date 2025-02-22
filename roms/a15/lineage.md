@@ -51,17 +51,17 @@ features:
     linkText: Click for open
     link: /guides/flash14.md
 
-  - title: Telegram post
+  - title: Telegram Updates
     icon:
         src: /telegram.png
     linkText: Click for open
-    link: "https://t.me/z5supdates/874"
+    link: "https://t.me/z5supdates/"
 
   - title: Download from Telegram
     icon:
         src: /telegram.png
     linkText: Click to dowload
-    link: "https://t.me/lenovoZ5Sru/1001"
+    link: "https://t.me/lenovoZ5Sru/"
 
   - title: Download from NextCloud
     icon:
