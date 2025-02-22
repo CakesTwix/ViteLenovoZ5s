@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "LineageOS"
-  tagline: "Unofficial build, lock bootloader support, with KernelSU and no MicroG Support (yet)"
+  tagline: "Unofficial build, lock bootloader support, with KernelSU"
   text: "\nFeatures:"
   image:
       alt: Android 15
@@ -23,12 +23,12 @@ features:
   - title: Version
     icon:
         src: /version.png
-    details: 22
+    details: 22.1
 
   - title: Security Patch
     icon:
         src: /securitypatch.png
-    details: November 2024
+    details: February 2025
 
   - title: GApps
     icon:
@@ -40,7 +40,7 @@ features:
         src: /microg.webp
     details: Not Supported
 
-  - title: No OTA (yet)
+  - title: OTA
     icon:
         src: /ota.webp
     details: Over-the-air update
