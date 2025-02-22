@@ -46,13 +46,13 @@ features:
     icon: 
         src: /nextcloud.png
     linkText: Click to dowload
-    link: "https://nextcloud.cakestwix.com/s/Myp42zobCa9ioBL?path=%2FOrangeFox%20Recovery"
+    link: "https://nextcloud.cakestwix.com/s/tELA6H8xnDMqYyd?path=%2FOrangeFox%20Recovery"
 
   - title: Download from NextCloud (Non-Dynamic Version)
     icon: 
         src: /nextcloud.png
     linkText: Click to dowload
-    link: "https://nextcloud.cakestwix.com/s/CWB2b85SqJHQC9g?path=%2FOrangeFox%20Recovery"
+    link: "https://nextcloud.cakestwix.com/s/oQqNbcLdxeGmwMS?path=%2FOrangeFox%20Recovery"
 
 ---
 
