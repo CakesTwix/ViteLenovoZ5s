@@ -28,7 +28,7 @@ features:
   - title: Security Patch
     icon:
         src: /securitypatch.png
-    details: February 2025
+    details: March 2025
 
   - title: GApps
     icon:
