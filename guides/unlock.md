@@ -19,7 +19,7 @@ You can get the IMEI by typing `*#06#` into the dialer. You can get the serial n
 1. Now Click Submit application. Wait until You Will Receive `unlock_bootloader.img` File via Email
 
 ### Unofficial way
-1. Just download [unlock_bootloader.img](https://nextcloud.cakestwix.com/s/mNQejibxkbRgNL6)
+1. Just download [unlock_bootloader.img](https://nextcloud.cakestwix.com/s/76JzqwaCb5yffHy/download/unlock_bootloader.img)
 ::: info
 The bootloader will not check the image to see if it is yours, so you can flash any other image. It's safe.
 :::
