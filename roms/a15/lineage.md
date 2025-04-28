@@ -23,12 +23,12 @@ features:
   - title: Version
     icon:
         src: /version.png
-    details: 22.1
+    details: 22.2
 
   - title: Security Patch
     icon:
         src: /securitypatch.png
-    details: March 2025
+    details: April 2025
 
   - title: GApps
     icon:
