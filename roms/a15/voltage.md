@@ -23,18 +23,18 @@ features:
   - title: Version
     icon: 
         src: /version.png
-    details: 4.0.1
+    details: 4.5-EOL
   
   - title: Security Patch
     icon: 
         src: /securitypatch.png
-    details: November 2024
+    details: June 2025
   
   - title: GApps
     icon: 
         src: /gapps.png
-    details: No
-    linkText: Click for more info
+    details: No | Sandboxed
+    linkText: Click for more info about sandbox GApps
     link: "https://grapheneos.org/usage#sandboxed-google-play"
 
   - title: OTA
@@ -52,13 +52,13 @@ features:
     icon: 
         src: /telegram.png
     linkText: Click for open
-    link: "https://t.me/z5supdates/876"
+    link: "https://t.me/z5supdates/"
 
   - title: Download from Telegram
     icon: 
         src: /telegram.png
     linkText: Click to dowload
-    link: "https://t.me/lenovoZ5Sru/1006"
+    link: "https://t.me/lenovoZ5Sru/"
 
   - title: Download from NextCloud
     icon: 
