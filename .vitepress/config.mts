@@ -25,6 +25,7 @@ export default defineConfig({
           { text: 'Android 13', link: '/roms/a13/' },
           { text: 'Android 14', link: '/roms/a14/' },
           { text: 'Android 15', link: '/roms/a15/' },
+          { text: 'Android 16', link: '/roms/a16/' },
         ]
       },
       {
