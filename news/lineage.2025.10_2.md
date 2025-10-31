@@ -13,6 +13,7 @@ date: 2025-10-29
 ## Device updates
 
 1. Added SuSFS to Kernel
+2. Fixed SeLinux for Chrome (October 31)
 
 ## Download
 
@@ -21,17 +22,17 @@ The update is available in the OTA, manual download is available on the [firmwar
 ## Checksums
 
 ```
-MD5: a1292017a542de2f3543d0bba38358ab
+MD5: 282b76caa8db9308e08de760d63ea9ef
 ```
 
 ```
-SHA1: 05943d86f27f945ce67245ddcf1671fbf342571e
+SHA1: 3c5f85ae666ae69c690cd9a60d7a75ea4abff257
 ```
 
 ```
-SHA256: 7c199432abd7700c2890b5bc4dc8be15e968d0e54e8fa4045e9fd823a011bdab
+SHA256: b220cc26cc7b6595c26532a2740435c1aacec7fdc5399a467979c283274134d6
 ```
 
 ```
-SHA512: 2a2116a4c0d15379deaf063d083b8a30afd9b48af6a81dfbbe11944b2f095a2f551fca7fb7bbf64c30edff4eee0acae536ba586cac3117dca90baa87006caeca
+SHA512: 12de8055fbba6b11ee363b1c9288d1e26126630532e53c17e92b4bc06d4d9f1c205d76b3042617b73d5f2c7515cccbd75ba3e8f58edc89ddc64e0d9f8478c46b
 ```
