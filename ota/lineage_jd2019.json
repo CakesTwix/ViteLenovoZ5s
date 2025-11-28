@@ -1,0 +1,14 @@
+{
+  "response": [
+    {
+      "datetime": 1762698699,
+      "filename": "lineage-23.0-20251109-UNOFFICIAL-jd2019.zip",
+      "id": "5c4e8d8175bb09cafc56f1116001278f",
+      "romtype": "UNOFFICIAL",
+      "size": 1383590216,
+      "sha256sum": "cf0def65b8204cb82e79422bfb513965c6bd0e70a442134ea135798d6be2b4ff",
+      "url": "https://nextcloud.lan/public.php/dav/files/oktmaan6sboddYJ",
+      "version": "23.0"
+    }
+  ]
+}
