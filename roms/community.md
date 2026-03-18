@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Community"
+  name: "Community (jd2019)"
 
 features:
   - title: Telegram Updates

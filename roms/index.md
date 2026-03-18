@@ -35,5 +35,11 @@ features:
     icon:
         src: /15.svg
 
+  - title: Android 16
+    link: /roms/a16/
+    icon:
+        src: /16q.png
+
+
 ---
 

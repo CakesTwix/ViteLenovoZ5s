@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "Lenovo Z5s"
-  text: "List of custom roms for Lenovo Z5s"
+  name: "Lenovo Z5s, Z6 lite, K10 Note"
+  text: "List of custom roms for Lenovo sdm710"
 
 features:
   - title: Custom ROMS
-    details: List of custom firmware of all versions
+    details: List of custom firmware of all versions (for now only jd2019)
     link: /roms/
   - title: Recovery
     details: List of custom recoveries such as TWRP

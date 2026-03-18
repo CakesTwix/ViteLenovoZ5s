@@ -13,7 +13,7 @@ features:
   - title: Android 16
     link: /roms/a16/
     icon:
-      src: /16.svg
+      src: /16.png
     linkText: Based on Android 16
 
   - title: Maintainer
@@ -23,7 +23,7 @@ features:
   - title: Version
     icon:
         src: /version.png
-    details: 23.0
+    details: "23.0"
 
   - title: Security Patch
     icon:
@@ -38,7 +38,7 @@ features:
   - title: MicroG
     icon:
         src: /microg.webp
-    details: Not Supported
+    details: Supported
 
   - title: OTA
     icon:
@@ -63,11 +63,11 @@ features:
     linkText: Click to dowload
     link: "https://t.me/lenovoZ5Sru/"
 
-  - title: Download from NextCloud
+  - title: Download from SourceForge
     icon:
-        src: /nextcloud.png
+        src: /sourceforge.png
     linkText: Click to dowload
-    link: "https://nextcloud.cakestwix.com/s/tELA6H8xnDMqYyd?path=%2FLineageOS"
+    link: "https://sourceforge.net/projects/cakestwix-roms/files/"
 
 ---
 
