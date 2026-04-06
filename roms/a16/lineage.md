@@ -23,12 +23,12 @@ features:
   - title: Version
     icon:
         src: /version.png
-    details: "23.0"
+    details: "23.1"
 
   - title: Security Patch
     icon:
         src: /securitypatch.png
-    details: November 2025
+    details: February 2026
 
   - title: GApps
     icon:
@@ -51,13 +51,19 @@ features:
     linkText: Click for open
     link: /guides/flash14.md
 
-  - title: Telegram Updates
+  - title: Telegram Updates (jd2019)
     icon:
         src: /telegram.png
     linkText: Click for open
     link: "https://t.me/z5supdates/"
 
-  - title: Download from Telegram
+  - title: Telegram Updates (kunlun2*)
+    icon:
+        src: /telegram.png
+    linkText: Click for open
+    link: "https://t.me/LenovoK10NoteDownloads"
+
+  - title: Download from Telegram (jd2019)
     icon:
         src: /telegram.png
     linkText: Click to dowload

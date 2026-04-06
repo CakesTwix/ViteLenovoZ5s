@@ -1,14 +1,14 @@
 {
   "response": [
     {
-      "datetime": 1762698699,
-      "filename": "lineage-23.0-20251109-UNOFFICIAL-jd2019.zip",
-      "id": "5c4e8d8175bb09cafc56f1116001278f",
+      "datetime": 1775126578,
+      "filename": "lineage-23.1-20260402-UNOFFICIAL-jd2019.zip",
+      "id": "059cb26647dee1d2c2d352c122b40dcc",
       "romtype": "UNOFFICIAL",
-      "size": 1383590216,
-      "sha256sum": "cf0def65b8204cb82e79422bfb513965c6bd0e70a442134ea135798d6be2b4ff",
-      "url": "https://nextcloud.lan/public.php/dav/files/oktmaan6sboddYJ",
-      "version": "23.0"
+      "size": 1402927991,
+      "sha256sum": "c786c502d0303fdf76626eccdc5c8d1a3a25b0cbd0c6923855969bba2e546000",
+      "url": "https://master.dl.sourceforge.net/project/cakestwix-roms/jd2019/lineage-23.1-20260402-UNOFFICIAL-jd2019.zip",
+      "version": "23.1"
     }
   ]
 }
