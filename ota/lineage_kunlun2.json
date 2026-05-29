@@ -1,14 +1,14 @@
 {
   "response": [
     {
-      "datetime": 1775149333,
-      "filename": "lineage-23.1-20260402-UNOFFICIAL-kunlun2.zip",
-      "id": "80702190455e8d1e249d963726d43f7b",
+      "datetime": 1779985518,
+      "filename": "lineage-23.2-20260528-UNOFFICIAL-kunlun2.zip",
+      "id": "bc4937ecb0f9351b7216b479882ed5ff",
       "romtype": "UNOFFICIAL",
-      "size": 1334838353,
-      "sha256sum": "18e837b2c0f0350a598e1af5b13e0997e293579a3700417b1fc23450fdb7e738",
-      "url": "https://master.dl.sourceforge.net/project/cakestwix-roms/kunlun2/lineage-23.1-20260402-UNOFFICIAL-kunlun2.zip",
-      "version": "23.1"
+      "size": 1347482670,
+      "sha256sum": "0224acd4af5e98c89bbb35ff8345ca4c01e2a899c47bf49816f0effd2aae6457",
+      "url": "https://master.dl.sourceforge.net/project/cakestwix-roms/kunlun2/lineage-23.2-20260528-UNOFFICIAL-kunlun2.zip",
+      "version": "23.2"
     }
   ]
 }
