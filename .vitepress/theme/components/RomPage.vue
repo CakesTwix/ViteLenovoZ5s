@@ -1,10 +1,138 @@
 <script setup lang="ts">
 import { computed } from "vue"
-import { withBase, useData } from 'vitepress'
+import { withBase, useData } from "vitepress"
 
 const { frontmatter } = useData()
+const fm = computed(() => frontmatter.value)
 
-interface RomFeature {
+// ── Unified data structures ──────────────────────────────
+interface SpecItem {
+	label: string
+	value?: string
+	linkText?: string
+	link?: string
+	iconImg?: string
+	iconHtml?: string
+}
+
+interface DownloadItem {
+	title: string
+	url: string
+	subtitle?: string
+	iconImg?: string
+}
+
+interface LinkItem {
+	title: string
+	url: string
+	subtitle?: string
+	iconImg?: string
+	iconHtml?: string
+}
+
+// ── Helpers ──────────────────────────────────────────────
+const androidIcons: Record<string, string> = {
+	"10": "/Q_big.png",
+	"11": "/R.png",
+	"12": "/12.webp",
+	"13": "/13.png",
+	"14": "/14.svg",
+	"15": "/15.svg",
+	"16": "/16.png",
+}
+
+function detectIcon(url: string): string | undefined {
+	const u = (url || "").toLowerCase()
+	if (u.includes("sourceforge")) return "/sourceforge.png"
+	if (u.includes("t.me") || u.includes("telegram")) return "/telegram.png"
+	if (u.includes("nextcloud")) return "/nextcloud.png"
+	return undefined
+}
+
+function avatarHtml(user: string): string {
+	return `<img src="https://www.github.com/${user}.png" style="border-radius: 10%;"/>`
+}
+
+// ── Format detection ─────────────────────────────────────
+// New flat format if any of these top-level fields exist
+const useFlat = computed(
+	() => !!(fm.value.name || fm.value.version || fm.value.patch || fm.value.android)
+)
+
+// ── New flat format ──────────────────────────────────────
+const flatSpecs = computed<SpecItem[]>(() => {
+	if (!useFlat.value) return []
+	const f = fm.value
+	const specs: SpecItem[] = []
+
+	if (f.android) {
+		const ver = String(f.android)
+		specs.push({
+			label: `Android ${ver}`,
+			linkText: `Based on Android ${ver}`,
+			link: `/roms/a${ver}/`,
+			iconImg: androidIcons[ver],
+		})
+	}
+
+	const maintainers = Array.isArray(f.maintainer) ? f.maintainer : f.maintainer ? [f.maintainer] : []
+	maintainers.forEach((m: string) => {
+		const name = typeof m === "string" ? m : m?.name || ""
+		const note = typeof m === "object" && m?.note ? ` (${m.note})` : ""
+		specs.push({ label: "Maintainer", value: name + note, iconHtml: avatarHtml(name) })
+	})
+
+	if (f.version) specs.push({ label: "Version", value: String(f.version), iconImg: "/version.png" })
+	if (f.patch) specs.push({ label: "Security Patch", value: String(f.patch), iconImg: "/securitypatch.png" })
+	if (f.gapps) specs.push({ label: "GApps", value: String(f.gapps), iconImg: "/gapps.png" })
+	if (f.microg) specs.push({ label: "MicroG", value: String(f.microg), iconImg: "/microg.webp" })
+	if (f.ota) specs.push({ label: "OTA", value: String(f.ota), iconImg: "/ota.webp" })
+
+	return specs
+})
+
+const flatDownloads = computed<DownloadItem[]>(() => {
+	if (!useFlat.value) return []
+	const dls = fm.value.download as any[] | undefined
+	if (!dls) return []
+	return dls.map((d) => ({
+		title: d.name || "Download",
+		url: d.url || d.link || "#",
+		subtitle: d.subtitle || "Click to download",
+		iconImg: d.icon || detectIcon(d.url || d.link || ""),
+	}))
+})
+
+const flatLinks = computed<LinkItem[]>(() => {
+	if (!useFlat.value) return []
+	const items: LinkItem[] = []
+
+	if (fm.value.instruction) {
+		items.push({ title: "How to Flash", url: String(fm.value.instruction), subtitle: "Click for open", iconImg: "/info.png" })
+	}
+	if (fm.value.screenshots) {
+		items.push({ title: "Screenshots", url: String(fm.value.screenshots), subtitle: "Click to open", iconImg: "/screenshots.png" })
+	}
+	if (fm.value.changelog) {
+		items.push({ title: "Changelogs", url: String(fm.value.changelog), subtitle: "Click to open", iconImg: "/changelog.png" })
+	}
+
+	const custom = fm.value.links as any[] | undefined
+	if (custom) {
+		custom.forEach((l) => {
+			items.push({
+				title: l.name || "Link",
+				url: l.url || l.link || "#",
+				subtitle: l.subtitle || "Click for open",
+				iconImg: l.icon || detectIcon(l.url || l.link || "") || "/telegram.png",
+			})
+		})
+	}
+	return items
+})
+
+// ── Legacy format (hero + features) ──────────────────────
+interface LegacyFeature {
 	title?: string
 	details?: string
 	icon?: { src: string; alt?: string } | string
@@ -12,10 +140,10 @@ interface RomFeature {
 	linkText?: string
 }
 
-const hero = computed(() => (frontmatter.value.hero as any) || {})
-const features = computed<RomFeature[]>(() => frontmatter.value.features || [])
+const hero = computed(() => (fm.value.hero as any) || {})
+const features = computed<LegacyFeature[]>(() => fm.value.features || [])
 
-function category(f: RomFeature): string {
+function legacyCategory(f: LegacyFeature): string {
 	const t = (f.title || "").toLowerCase()
 	if (t.includes("download")) return "download"
 	if (t.includes("flash") || t.includes("guide")) return "link"
@@ -25,35 +153,81 @@ function category(f: RomFeature): string {
 		t.includes("screenshot") ||
 		t.includes("changelog") ||
 		t.includes("source") ||
-		t.includes("community")
+		t.includes("community") ||
+		t.includes("forum")
 	)
 		return "link"
 	return "spec"
 }
 
-const specs = computed(() => features.value.filter((f) => category(f) === "spec"))
-const downloads = computed(() => features.value.filter((f) => category(f) === "download"))
-const links = computed(() => features.value.filter((f) => category(f) === "link"))
+const legacySpecs = computed<SpecItem[]>(() =>
+	features.value
+		.filter((f) => legacyCategory(f) === "spec")
+		.map((f) => ({
+			label: f.title || "",
+			value: f.details,
+			linkText: f.linkText,
+			link: f.link,
+			iconImg: typeof f.icon === "object" && f.icon?.src ? f.icon.src : undefined,
+			iconHtml: typeof f.icon === "string" ? f.icon : undefined,
+		}))
+)
 
-function isImg(icon: RomFeature["icon"]): icon is { src: string; alt?: string } {
-	return typeof icon === "object" && icon !== null
-}
+const legacyDownloads = computed<DownloadItem[]>(() =>
+	features.value
+		.filter((f) => legacyCategory(f) === "download")
+		.map((f) => ({
+			title: f.title || "Download",
+			url: f.link || "#",
+			subtitle: f.linkText || f.details || "Click to download",
+			iconImg: typeof f.icon === "object" && f.icon?.src ? f.icon.src : undefined,
+		}))
+)
+
+const legacyLinks = computed<LinkItem[]>(() =>
+	features.value
+		.filter((f) => legacyCategory(f) === "link")
+		.map((f) => ({
+			title: f.title || "",
+			url: f.link || "#",
+			subtitle: f.linkText || f.details,
+			iconImg: typeof f.icon === "object" && f.icon?.src ? f.icon.src : undefined,
+			iconHtml: typeof f.icon === "string" ? f.icon : undefined,
+		}))
+)
+
+// ── Unified output ───────────────────────────────────────
+const displayName = computed(() => (useFlat.value ? fm.value.name : hero.value.name))
+const displayTagline = computed(() => (useFlat.value ? fm.value.tagline : hero.value.tagline))
+const displayIcon = computed<string | undefined>(() => {
+	if (useFlat.value) return fm.value.icon as string | undefined
+	const img = hero.value.image
+	return img?.src
+})
+const displayIconAlt = computed(() => {
+	if (useFlat.value) return fm.value.name
+	return hero.value.image?.alt
+})
+
+const specs = computed(() => (useFlat.value ? flatSpecs.value : legacySpecs.value))
+const downloads = computed(() => (useFlat.value ? flatDownloads.value : legacyDownloads.value))
+const links = computed(() => (useFlat.value ? flatLinks.value : legacyLinks.value))
 </script>
 
 <template>
 	<div class="rom-layout">
 		<!-- HERO -->
-		<section class="rom-hero" v-if="hero.name || hero.image">
+		<section class="rom-hero" v-if="displayName || displayIcon">
 			<div class="rom-hero-glow"></div>
 			<div class="rom-hero-inner">
 				<img
-					v-if="hero.image && isImg(hero.image)"
+					v-if="displayIcon"
 					class="rom-hero-logo"
-					:src="withBase(hero.image.src)"
-					:alt="hero.image.alt || hero.name || ''"
+					:src="withBase(displayIcon)"
+					:alt="displayIconAlt || displayName || ''"
 				/>
-				<h1 class="rom-hero-name">{{ hero.name }}</h1>
-				<p class="rom-hero-tagline" v-if="hero.tagline">{{ hero.tagline }}</p>
+				<h1 class="rom-hero-name">{{ displayName }}</h1>
+				<p class="rom-hero-tagline" v-if="displayTagline">{{ displayTagline }}</p>
 			</div>
 		</section>
 
@@ -62,24 +236,20 @@ function isImg(icon: RomFeature["icon"]): icon is { src: string; alt?: string } 
 			<h2 class="rom-block-title">Specifications</h2>
 			<div class="spec-grid">
 				<a
-					v-for="(f, i) in specs"
+					v-for="(s, i) in specs"
 					:key="'spec' + i"
 					class="spec-card"
-					:class="{ 'is-link': f.link }"
-					:href="f.link"
+					:class="{ 'is-link': s.link }"
+					:href="s.link"
 				>
 					<div class="spec-icon">
-						<img
-							v-if="isImg(f.icon)"
-							:src="withBase((f.icon as any).src)"
-							:alt="(f.icon as any).alt || ''"
-						/>
-						<span v-else-if="typeof f.icon === 'string'" v-html="f.icon"></span>
+						<img v-if="s.iconImg" :src="withBase(s.iconImg)" :alt="s.label" />
+						<span v-else-if="s.iconHtml" v-html="s.iconHtml"></span>
 					</div>
 					<div class="spec-body">
-						<span class="spec-label">{{ f.title }}</span>
-						<span class="spec-value" v-if="f.details">{{ f.details }}</span>
-						<span class="spec-value spec-action" v-else-if="f.linkText">{{ f.linkText }}</span>
+						<span class="spec-label">{{ s.label }}</span>
+						<span class="spec-value" v-if="s.value">{{ s.value }}</span>
+						<span class="spec-value spec-action" v-else-if="s.linkText">{{ s.linkText }}</span>
 					</div>
 				</a>
 			</div>
@@ -90,22 +260,17 @@ function isImg(icon: RomFeature["icon"]): icon is { src: string; alt?: string } 
 			<h2 class="rom-block-title">Downloads</h2>
 			<div class="download-grid">
 				<a
-					v-for="(f, i) in downloads"
+					v-for="(d, i) in downloads"
 					:key="'dl' + i"
 					class="download-btn"
-					:href="f.link"
+					:href="d.url"
 				>
 					<span class="download-icon">
-						<img
-							v-if="isImg(f.icon)"
-							:src="withBase((f.icon as any).src)"
-							:alt="(f.icon as any).alt || ''"
-						/>
-						<span v-else-if="typeof f.icon === 'string'" v-html="f.icon"></span>
+						<img v-if="d.iconImg" :src="withBase(d.iconImg)" :alt="d.title" />
 					</span>
 					<span class="download-text">
-						<span class="download-title">{{ f.title }}</span>
-						<span class="download-sub">{{ f.linkText || f.details || "Download" }}</span>
+						<span class="download-title">{{ d.title }}</span>
+						<span class="download-sub">{{ d.subtitle }}</span>
 					</span>
 					<svg class="download-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
 						<path fill="currentColor" d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z" />
@@ -119,24 +284,18 @@ function isImg(icon: RomFeature["icon"]): icon is { src: string; alt?: string } 
 			<h2 class="rom-block-title">Links &amp; Community</h2>
 			<div class="link-grid">
 				<a
-					v-for="(f, i) in links"
+					v-for="(l, i) in links"
 					:key="'lnk' + i"
 					class="link-card"
-					:href="f.link"
+					:href="l.url"
 				>
 					<span class="link-icon">
-						<img
-							v-if="isImg(f.icon)"
-							:src="withBase((f.icon as any).src)"
-							:alt="(f.icon as any).alt || ''"
-						/>
-						<span v-else-if="typeof f.icon === 'string'" v-html="f.icon"></span>
+						<img v-if="l.iconImg" :src="withBase(l.iconImg)" :alt="l.title" />
+						<span v-else-if="l.iconHtml" v-html="l.iconHtml"></span>
 					</span>
 					<span class="link-body">
-						<span class="link-title">{{ f.title }}</span>
-						<span class="link-sub" v-if="f.linkText || f.details">
-							{{ f.linkText || f.details }}
-						</span>
+						<span class="link-title">{{ l.title }}</span>
+						<span class="link-sub" v-if="l.subtitle">{{ l.subtitle }}</span>
 					</span>
 					<svg class="link-arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
 						<path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
