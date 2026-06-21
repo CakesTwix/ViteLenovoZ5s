@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "Pixel Experience"
@@ -51,3 +51,5 @@ features:
 
 
 
+
+<RomPage />

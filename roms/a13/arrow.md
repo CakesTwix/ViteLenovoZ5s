@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "ArrowOS"
@@ -58,3 +58,5 @@ features:
 
 
 
+
+<RomPage />

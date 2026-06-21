@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "LineageOS"
@@ -68,3 +68,5 @@ features:
 
 
 
+
+<RomPage />

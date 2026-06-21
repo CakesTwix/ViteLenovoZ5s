@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "TWRP"
@@ -56,3 +56,5 @@ features:
 
 
 
+
+<RomPage />

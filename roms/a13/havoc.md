@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "HavocOS"
@@ -63,3 +63,5 @@ features:
 
 
 
+
+<RomPage />

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "CherishOS"
@@ -63,3 +63,5 @@ features:
 
 
 
+
+<RomPage />

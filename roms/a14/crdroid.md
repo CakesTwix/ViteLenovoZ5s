@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "crDroid"
@@ -79,3 +79,5 @@ features:
     link: "https://nextcloud.cakestwix.com/s/tELA6H8xnDMqYyd?path=%2FcrDroid"
 
 ---
+
+<RomPage />

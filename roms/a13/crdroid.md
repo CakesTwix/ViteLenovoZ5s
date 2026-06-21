@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "crDroid"
@@ -28,7 +28,7 @@ features:
   - title: Security Patch
     icon: 
         src: /securitypatch.png
-    details: '<p style="color: rgb(255,0,0);">June (2020)</p>'
+    details: 'June (2020)'
   
   - title: GApps
     icon: 
@@ -51,3 +51,5 @@ features:
 
 
 
+
+<RomPage />

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "VoltageOS"
@@ -70,3 +70,5 @@ features:
 
 
 
+
+<RomPage />

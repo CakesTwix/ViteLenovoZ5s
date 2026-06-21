@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "/e/"
@@ -74,3 +74,5 @@ features:
 
 
 
+
+<RomPage />

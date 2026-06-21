@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "BlissROM"
@@ -28,7 +28,7 @@ features:
   - title: Security Patch
     icon: 
         src: /securitypatch.png
-    details: '<p style="color: rgb(255,0,0);">September (2020)</p>'
+    details: 'September (2020)'
   
   - title: GApps
     icon: 
@@ -56,3 +56,5 @@ features:
 
 
 
+
+<RomPage />

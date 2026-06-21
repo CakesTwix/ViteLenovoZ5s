@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "FluidOS"
@@ -28,7 +28,7 @@ features:
   - title: Security Patch
     icon: 
         src: /securitypatch.png
-    details: '<p style="color: rgb(255,0,0);">October (2020)</p>'
+    details: 'October (2020)'
   
   - title: Screenshots
     link: https://imgur.com/gallery/EMcJJCI
@@ -57,3 +57,5 @@ features:
 
 
 
+
+<RomPage />

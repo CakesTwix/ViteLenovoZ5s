@@ -1,13 +1,12 @@
 ---
-layout: home
+layout: page
 
 hero:
   name: "LineageOS"
   tagline: "Unofficial build, lock bootloader support, with KernelSU and SuSFS"
-  text: "\nFeatures:"
   image:
-      alt: Android 16
-      src: /roms-icons/lineage.png
+    alt: Android 16
+    src: /roms-icons/lineage.png
 
 features:
   - title: Android 16
@@ -22,60 +21,58 @@ features:
 
   - title: Version
     icon:
-        src: /version.png
+      src: /version.png
     details: "23.2"
 
   - title: Security Patch
     icon:
-        src: /securitypatch.png
+      src: /securitypatch.png
     details: April 2026
 
   - title: GApps
     icon:
-        src: /gapps.png
+      src: /gapps.png
     details: Not Integrated
 
   - title: MicroG
     icon:
-        src: /microg.webp
+      src: /microg.webp
     details: Supported
 
   - title: OTA
     icon:
-        src: /ota.webp
+      src: /ota.webp
     details: Over-the-air update
 
   - title: How to Flash
     icon:
-        src: /info.png
+      src: /info.png
     linkText: Click for open
     link: /guides/flash14.md
 
   - title: Telegram Updates (jd2019)
     icon:
-        src: /telegram.png
+      src: /telegram.png
     linkText: Click for open
     link: "https://t.me/z5supdates/"
 
   - title: Telegram Updates (kunlun2*)
     icon:
-        src: /telegram.png
+      src: /telegram.png
     linkText: Click for open
     link: "https://t.me/LenovoK10NoteDownloads"
 
   - title: Download from Telegram (jd2019)
     icon:
-        src: /telegram.png
-    linkText: Click to dowload
+      src: /telegram.png
+    linkText: Click to download
     link: "https://t.me/lenovoZ5Sru/"
 
   - title: Download from SourceForge
     icon:
-        src: /sourceforge.png
-    linkText: Click to dowload
+      src: /sourceforge.png
+    linkText: Click to download
     link: "https://sourceforge.net/projects/cakestwix-roms/files/"
-
 ---
 
-
-
+<RomPage />
