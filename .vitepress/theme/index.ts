@@ -7,5 +7,6 @@ export default {
 	extends: DefaultTheme,
 	enhanceApp({ app }) {
 		app.component("RomPage", RomPage)
+		app.component("Rom", RomPage)
 	},
 }

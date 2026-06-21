@@ -1,60 +1,23 @@
 ---
-layout: page
+layout: rom
 
-hero:
-  name: "AncientOS"
-  tagline: "Unofficial build"
-  text: "\nFeatures:"
-  image: 
-      alt: Android 10
-      src: /roms-icons/ancient.png
+name: AncientOS
+tagline: Unofficial build
+icon: /roms-icons/ancient.png
 
-features:
-  - title: Android 10
-    link: /roms/a10/
-    icon: 
-      src: /Q_big.png
-    linkText: Based on Android 10
+android: "10"
+maintainer: CakesTwix
+version: 4.0.1
+patch: November (2020)
+gapps: Has both options
 
-  - title: Maintainer
-    icon: '<img src="https://www.github.com/CakesTwix.png" style="border-radius: 10%;"/>'
-    details: CakesTwix
+download:
+  - name: SourceForge
+    url: https://sourceforge.net/projects/z5s-roms/files/AncientOS/
+  - name: NextCloud
+    url: https://nextcloud.cakestwix.com/s/oQqNbcLdxeGmwMS?path=%2FAncientOS
 
-  - title: Version
-    icon: 
-        src: /version.png
-    details: 4.0.1
-  
-  - title: Security Patch
-    icon: 
-        src: /securitypatch.png
-    details: 'November (2020)'
-  
-  - title: GApps
-    icon: 
-        src: /gapps.png
-    details: Has both options
-
-  - title: Telegram post
-    icon: 
-        src: /telegram.png
-    linkText: Click for open
-    link: "https://t.me/z5supdates/461"
-
-  - title: Download from SourceForge
-    icon: 
-        src: /sourceforge.png
-    linkText: Click to dowload
-    link: "https://sourceforge.net/projects/z5s-roms/files/AncientOS/"
-  - title: Download from NextCloud
-    icon: 
-        src: /nextcloud.png
-    linkText: Click to dowload
-    link: "https://nextcloud.cakestwix.com/s/oQqNbcLdxeGmwMS?path=%2FAncientOS"
-
+links:
+  - name: Telegram post
+    url: https://t.me/z5supdates/461
 ---
-
-
-
-
-<RomPage />

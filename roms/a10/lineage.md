@@ -1,55 +1,21 @@
 ---
-layout: page
+layout: rom
 
-hero:
-  name: "LineageOS"
-  tagline: "Unofficial build"
-  text: "\nFeatures:"
-  image: 
-      alt: Android 10
-      src: /roms-icons/lineage.png
+name: LineageOS
+tagline: Unofficial build
+icon: /roms-icons/lineage.png
 
-features:
-  - title: Android 10
-    link: /roms/a10/
-    icon: 
-      src: /Q_big.png
-    linkText: Based on Android 10
+android: "10"
+maintainer: Dlearin
+version: "17.1"
+patch: December (2020)
+gapps: Not Integrated
 
-  - title: Maintainer
-    icon: '<img src="https://www.github.com/Dlearin.png" style="border-radius: 10%;"/>'
-    details: Dlearin
+download:
+  - name: Telegram
+    url: https://t.me/lenovoZ5Sru/827
 
-  - title: Version
-    icon: 
-        src: /version.png
-    details: 17.1
-  
-  - title: Security Patch
-    icon: 
-        src: /securitypatch.png
-    details: 'December (2020)'
-  
-  - title: GApps
-    icon: 
-        src: /gapps.png
-    details: Not Integrated
-
-  - title: Telegram post
-    icon: 
-        src: /telegram.png
-    linkText: Click for open
-    link: "https://t.me/z5supdates/367"
-
-  - title: Download from Telegram
-    icon: 
-        src: /telegram.png
-    linkText: Click to dowload
-    link: "https://t.me/lenovoZ5Sru/827"
-
+links:
+  - name: Telegram post
+    url: https://t.me/z5supdates/367
 ---
-
-
-
-
-<RomPage />

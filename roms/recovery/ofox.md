@@ -1,62 +1,23 @@
 ---
-layout: page
+layout: rom
 
-hero:
-  name: "OrangeFox Recovery Project"
-  text: "\nFeatures:"
-  image: 
-      alt: OrangeFox
-      src: /roms-icons/orangefox.png
+name: OrangeFox Recovery Project
+icon: /roms-icons/orangefox.png
 
-features:
-  - title: Maintainer
-    icon: '<img src="https://www.github.com/CakesTwix.png" style="border-radius: 10%;"/>'
-    details: CakesTwix
+maintainer: CakesTwix
+version: "12.1"
+instruction: https://wiki.orangefox.tech/en/guides/installing_orangefox
+screenshots: https://t.me/z5sromscreenshots/696
 
-  - title: Version
-    icon: 
-        src: /version.png
-    details: 12.1
+download:
+  - name: Telegram
+    url: https://t.me/lenovoZ5Sru/944
+  - name: NextCloud (Dynamic Version)
+    url: https://nextcloud.cakestwix.com/s/tELA6H8xnDMqYyd?path=%2FOrangeFox%20Recovery
+  - name: NextCloud (Non-Dynamic Version)
+    url: https://nextcloud.cakestwix.com/s/oQqNbcLdxeGmwMS?path=%2FOrangeFox%20Recovery
 
-  - title: How to Flash
-    icon: 
-        src: /info.png
-    linkText: Click for open
-    link: https://wiki.orangefox.tech/en/guides/installing_orangefox
-
-  - title: Screenshots
-    link: https://t.me/z5sromscreenshots/696
-    icon: 
-        src: /screenshots.png
-    linkText: Click to open
-
-  - title: Telegram post
-    icon: 
-        src: /telegram.png
-    linkText: Click for open
-    link: "https://t.me/z5supdates/830"
-
-  - title: Download from Telegram
-    icon: 
-        src: /telegram.png
-    linkText: Click to download
-    link: "https://t.me/lenovoZ5Sru/944"
-
-  - title: Download from NextCloud (Dynamic Version)
-    icon: 
-        src: /nextcloud.png
-    linkText: Click to dowload
-    link: "https://nextcloud.cakestwix.com/s/tELA6H8xnDMqYyd?path=%2FOrangeFox%20Recovery"
-
-  - title: Download from NextCloud (Non-Dynamic Version)
-    icon: 
-        src: /nextcloud.png
-    linkText: Click to dowload
-    link: "https://nextcloud.cakestwix.com/s/oQqNbcLdxeGmwMS?path=%2FOrangeFox%20Recovery"
-
+links:
+  - name: Telegram post
+    url: https://t.me/z5supdates/830
 ---
-
-
-
-
-<RomPage />

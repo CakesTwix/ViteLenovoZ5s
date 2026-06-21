@@ -1,55 +1,21 @@
 ---
-layout: page
+layout: rom
 
-hero:
-  name: "BootleggersROM"
-  tagline: "Unofficial build"
-  text: "\nFeatures:"
-  image: 
-      alt: Android 10
-      src: /roms-icons/bootleggers.png
+name: BootleggersROM
+tagline: Unofficial build
+icon: /roms-icons/bootleggers.png
 
-features:
-  - title: Android 10
-    link: /roms/a10/
-    icon: 
-      src: /Q_big.png
-    linkText: Based on Android 10
+android: "10"
+maintainer: HsyHusker
+version: 10/23/2020
+patch: August (2020)
+gapps: Integrated
 
-  - title: Maintainer
-    icon: '<img src="https://www.github.com/HsyHusker.png" style="border-radius: 10%;"/>'
-    details: HsyHusker
+download:
+  - name: Telegram
+    url: https://t.me/lenovoZ5Sru/202
 
-  - title: Version
-    icon: 
-        src: /version.png
-    details: 10/23/2020
-  
-  - title: Security Patch
-    icon: 
-        src: /securitypatch.png
-    details: 'August (2020)'
-  
-  - title: GApps
-    icon: 
-        src: /gapps.png
-    details: Integrated
-
-  - title: Telegram post
-    icon: 
-        src: /telegram.png
-    linkText: Click for open
-    link: "https://t.me/z5supdates/345"
-
-  - title: Download from Telegram
-    icon: 
-        src: /telegram.png
-    linkText: Click to open
-    link: "https://t.me/lenovoZ5Sru/202"
-
+links:
+  - name: Telegram post
+    url: https://t.me/z5supdates/345
 ---
-
-
-
-
-<RomPage />

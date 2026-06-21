@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: rom
 
 name: LineageOS
 tagline: "Unofficial build, lock bootloader support, with KernelSU and SuSFS"
@@ -27,4 +27,3 @@ links:
     url: https://t.me/LenovoK10NoteDownloads
 ---
 
-<RomPage />

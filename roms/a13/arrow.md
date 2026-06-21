@@ -1,62 +1,23 @@
 ---
-layout: page
+layout: rom
 
-hero:
-  name: "ArrowOS"
-  tagline: "Unofficial build, with KernelSU"
-  text: "\nFeatures:"
-  image: 
-      alt: Android 13
-      src: /roms-icons/arrow.png
+name: ArrowOS
+tagline: "Unofficial build, with KernelSU"
+icon: /roms-icons/arrow.png
 
-features:
-  - title: Android 13
-    link: /roms/a13/
-    icon: 
-      src: /13.png
-    linkText: Based on Android 13
+android: "13"
+maintainer: CakesTwix
+patch: July (2023)
+gapps: Not Integrated
+instruction: /guides/flashoss
 
-  - title: Maintainer
-    icon: '<img src="https://www.github.com/CakesTwix.png" style="border-radius: 10%;"/>'
-    details: CakesTwix
-  
-  - title: Security Patch
-    icon: 
-        src: /securitypatch.png
-    details: July (2023)
+download:
+  - name: Telegram
+    url: https://t.me/lenovoZ5Sru/882
+  - name: NextCloud
+    url: https://nextcloud.cakestwix.com/s/t27XGtqff8wzdg6
 
-  - title: GApps
-    icon: 
-        src: /gapps.png
-    details: Not Integrated
-
-  - title: How to Flash
-    icon: 
-        src: /info.png
-    linkText: Click for open
-    link: /guides/flashoss
-
-  - title: Telegram post
-    icon: 
-        src: /telegram.png
-    linkText: Click for open
-    link: "https://t.me/z5supdates/789"
-
-  - title: Download from Telegram
-    icon: 
-        src: /telegram.png
-    linkText: Click to download
-    link: "https://t.me/lenovoZ5Sru/882"
-
-  - title: Download from NextCloud
-    icon: 
-        src: /nextcloud.png
-    linkText: Click to dowload
-    link: "https://nextcloud.cakestwix.com/s/t27XGtqff8wzdg6"
-
+links:
+  - name: Telegram post
+    url: https://t.me/z5supdates/789
 ---
-
-
-
-
-<RomPage />
