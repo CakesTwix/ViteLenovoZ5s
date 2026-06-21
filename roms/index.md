@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: romlist
 
 hero:
   name: "Select Android version"

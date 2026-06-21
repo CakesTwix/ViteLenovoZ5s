@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: romlist
 
 hero:
   name: "\n\nList of custom roms on Android 13"
