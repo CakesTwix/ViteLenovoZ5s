@@ -155,9 +155,6 @@ function linkWithBase(url: string | undefined): string | undefined {
 	transform: translateY(-4px);
 	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
 }
-.romlist-card:hover::before {
-	opacity: 1;
-}
 
 .romlist-card-top {
 	margin-bottom: 1rem;
