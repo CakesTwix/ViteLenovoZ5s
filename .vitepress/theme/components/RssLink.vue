@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { withBase } from "vitepress"
 import { IconRssBox } from "@iconify-prerendered/vue-mdi"
 </script>
 
 <template>
-	<a href="/ViteLenovoZ5s/feed.rss" class="rss" title="RSS news archive feed">
+	<a :href="withBase('/feed.rss')" class="rss" title="RSS news archive feed">
 		<IconRssBox />
 		<span>RSS feed</span>
 	</a>

@@ -53,6 +53,12 @@ function avatarHtml(user: string): string {
 	return `<img src="https://www.github.com/${user}.png" style="border-radius: 10%;"/>`
 }
 
+function linkWithBase(url: string | undefined): string | undefined {
+	if (!url) return undefined
+	if (url.startsWith("/") && !url.startsWith("//")) return withBase(url)
+	return url
+}
+
 // ── Format detection ─────────────────────────────────────
 // New flat format if any of these top-level fields exist
 const useFlat = computed(
@@ -240,7 +246,7 @@ const links = computed(() => (useFlat.value ? flatLinks.value : legacyLinks.valu
 					:key="'spec' + i"
 					class="spec-card"
 					:class="{ 'is-link': s.link }"
-					:href="s.link"
+					:href="linkWithBase(s.link)"
 				>
 					<div class="spec-icon">
 						<img v-if="s.iconImg" :src="withBase(s.iconImg)" :alt="s.label" />
@@ -263,7 +269,7 @@ const links = computed(() => (useFlat.value ? flatLinks.value : legacyLinks.valu
 					v-for="(d, i) in downloads"
 					:key="'dl' + i"
 					class="download-btn"
-					:href="d.url"
+					:href="linkWithBase(d.url)"
 				>
 					<span class="download-icon">
 						<img v-if="d.iconImg" :src="withBase(d.iconImg)" :alt="d.title" />
@@ -287,7 +293,7 @@ const links = computed(() => (useFlat.value ? flatLinks.value : legacyLinks.valu
 					v-for="(l, i) in links"
 					:key="'lnk' + i"
 					class="link-card"
-					:href="l.url"
+					:href="linkWithBase(l.url)"
 				>
 					<span class="link-icon">
 						<img v-if="l.iconImg" :src="withBase(l.iconImg)" :alt="l.title" />

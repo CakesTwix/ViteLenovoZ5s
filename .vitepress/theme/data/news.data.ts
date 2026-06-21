@@ -21,7 +21,7 @@ export default createContentLoader("news/*.md", {
 					  title: frontmatter.title,
 					  description: frontmatter.description,
 					  date: frontmatter.date,
-					  url: "/ViteLenovoZ5s" + url,
+					  url,
 					},
 			).sort((a, b) => new Date(b.date) - new Date(a.date));
 	},

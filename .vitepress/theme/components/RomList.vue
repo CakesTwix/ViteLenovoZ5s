@@ -20,6 +20,12 @@ function iconSrc(icon: ListItem["icon"]): string | null {
 	if (typeof icon === "object" && icon?.src) return icon.src
 	return null
 }
+
+function linkWithBase(url: string | undefined): string | undefined {
+	if (!url) return undefined
+	if (url.startsWith("/") && !url.startsWith("//")) return withBase(url)
+	return url
+}
 </script>
 
 <template>
@@ -43,7 +49,7 @@ function iconSrc(icon: ListItem["icon"]): string | null {
 				v-for="(item, i) in items"
 				:key="i"
 				class="romlist-card"
-				:href="item.link"
+				:href="linkWithBase(item.link)"
 			>
 				<div class="romlist-card-top" v-if="iconSrc(item.icon)">
 					<div class="romlist-card-iconwrap">

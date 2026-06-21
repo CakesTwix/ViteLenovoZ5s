@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue"
+import { withBase } from "vitepress"
 import { data as newsList } from "../data/news.data"
 
 const fullDateFormatter = new Intl.DateTimeFormat("en", {
@@ -30,12 +31,18 @@ function year(date: string) {
 
 const featured = computed(() => newsList[0])
 const rest = computed(() => newsList.slice(1))
+
+function linkWithBase(url: string | undefined): string | undefined {
+	if (!url) return undefined
+	if (url.startsWith("/") && !url.startsWith("//")) return withBase(url)
+	return url
+}
 </script>
 
 <template>
 	<div class="news-feed">
 		<!-- FEATURED (latest) -->
-		<a v-if="featured" class="featured" :href="featured.url">
+		<a v-if="featured" class="featured" :href="linkWithBase(featured.url)">
 			<div class="featured-glow"></div>
 			<div class="featured-inner">
 				<div class="featured-badge">Latest</div>
@@ -54,7 +61,7 @@ const rest = computed(() => newsList.slice(1))
 				v-for="news of rest"
 				:key="news.url"
 				class="news-card"
-				:href="news.url"
+				:href="linkWithBase(news.url)"
 			>
 				<div class="date-chip">
 					<span class="date-month">{{ month(news.date) }}</span>
