@@ -2,6 +2,7 @@
 import DefaultTheme from "vitepress/theme"
 import RomPage from "./components/RomPage.vue"
 import RomList from "./components/RomList.vue"
+import Home from "./components/Home.vue"
 import "./style.css"
 
 export default {
@@ -10,5 +11,6 @@ export default {
 		app.component("RomPage", RomPage)
 		app.component("Rom", RomPage)
 		app.component("Romlist", RomList)
+		app.component("Homepage", Home)
 	},
 }
