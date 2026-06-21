@@ -84,7 +84,7 @@ function iconSvg(title: string): string {
 <style scoped>
 .home-layout {
 	max-width: 960px;
-	margin: 0 auto;
+	margin: 2rem auto 0;
 	padding-bottom: 3rem;
 }
 
