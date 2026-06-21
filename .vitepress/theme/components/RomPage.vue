@@ -315,7 +315,7 @@ const links = computed(() => (useFlat.value ? flatLinks.value : legacyLinks.valu
 <style scoped>
 .rom-layout {
 	max-width: 960px;
-	margin: 1rem auto 0;
+	margin: 2rem auto 0;
 	padding-bottom: 3rem;
 }
 
