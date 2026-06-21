@@ -9,6 +9,6 @@ export default {
 	enhanceApp({ app }) {
 		app.component("RomPage", RomPage)
 		app.component("Rom", RomPage)
-		app.component("RomList", RomList)
+		app.component("Romlist", RomList)
 	},
 }
