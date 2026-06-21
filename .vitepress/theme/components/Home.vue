@@ -10,7 +10,10 @@ const features = computed<any[]>(() => fm.value.features || [])
 
 function linkWithBase(url: string | undefined): string | undefined {
 	if (!url) return undefined
-	if (url.startsWith("/") && !url.startsWith("//")) return withBase(url)
+	if (url.startsWith("/") && !url.startsWith("//")) {
+		const clean = url.replace(/\.md$/, ".html")
+		return withBase(clean)
+	}
 	return url
 }
 

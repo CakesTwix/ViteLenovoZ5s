@@ -23,7 +23,10 @@ function iconSrc(icon: ListItem["icon"]): string | null {
 
 function linkWithBase(url: string | undefined): string | undefined {
 	if (!url) return undefined
-	if (url.startsWith("/") && !url.startsWith("//")) return withBase(url)
+	if (url.startsWith("/") && !url.startsWith("//")) {
+		const clean = url.replace(/\.md$/, ".html")
+		return withBase(clean)
+	}
 	return url
 }
 </script>
