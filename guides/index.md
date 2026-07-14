@@ -1,5 +1,5 @@
 ---
-layout: romlist
+layout: home
 
 hero:
   name: "Instructions"

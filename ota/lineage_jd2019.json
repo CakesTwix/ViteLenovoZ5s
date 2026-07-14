@@ -1,14 +1,15 @@
-{
-  "response": [
-    {
-      "datetime": 1779981288,
-      "filename": "lineage-23.2-20260528-UNOFFICIAL-jd2019.zip",
-      "id": "83da54088b06baab8618c6488cdbb521",
-      "romtype": "UNOFFICIAL",
-      "size": 1350301734,
-      "sha256sum": "f4a3fc1662a9be5bebfe41253f7e92e3ccea8bbd5a66d15c521c86d15f8f02e9",
-      "url": "https://master.dl.sourceforge.net/project/cakestwix-roms/jd2019/lineage-23.2-20260528-UNOFFICIAL-jd2019.zip",
-      "version": "23.2"
-    }
-  ]
-}
+[
+  {
+    "datetime": 1784038871,
+    "type": "UNOFFICIAL",
+    "version": "23.2",
+    "files": [
+      {
+        "filename": "lineage-23.2-20260714-UNOFFICIAL-jd2019.zip",
+        "sha256": "1359c349cb78d3109ca78ed73a68d50821a4aceb8ee770ec703839fda68b534f",
+        "size": 1358849076,
+        "url": "https://master.dl.sourceforge.net/project/cakestwix-roms/jd2019/lineage-23.2-20260714-UNOFFICIAL-jd2019.zip"
+      }
+    ]
+  }
+]

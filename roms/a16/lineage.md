@@ -8,7 +8,7 @@ icon: /roms-icons/lineage.png
 android: "16"
 maintainer: CakesTwix
 version: "23.2"
-patch: April 2026
+patch: July 2026
 gapps: Not Integrated
 microg: Supported
 ota: Over-the-air update
