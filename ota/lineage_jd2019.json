@@ -1,14 +1,14 @@
 [
   {
-    "datetime": 1784038871,
+    "datetime": 1788363132,
     "type": "UNOFFICIAL",
     "version": "23.2",
     "files": [
       {
-        "filename": "lineage-23.2-20260714-UNOFFICIAL-jd2019.zip",
-        "sha256": "1359c349cb78d3109ca78ed73a68d50821a4aceb8ee770ec703839fda68b534f",
-        "size": 1358849076,
-        "url": "https://master.dl.sourceforge.net/project/cakestwix-roms/jd2019/lineage-23.2-20260714-UNOFFICIAL-jd2019.zip"
+        "filename": "lineage-23.2-20260902-UNOFFICIAL-jd2019.zip",
+        "sha256": "e65db556d49aa65021257a83519ff573c5e4bf10d9c65f5d8eb4a7c9170a3f53",
+        "size": 1360933745,
+        "url": "https://github.com/CakesTwix/LineageOSBuilds/releases/download/sdm710-20260908/lineage-23.2-20260902-UNOFFICIAL-jd2019.zip"
       }
     ]
   }

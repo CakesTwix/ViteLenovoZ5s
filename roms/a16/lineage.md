@@ -15,9 +15,11 @@ ota: Over-the-air update
 instruction: /guides/flash14.md
 
 download:
-  - name: SourceForge
+  - name: GitHub
+    url: https://github.com/CakesTwix/LineageOSBuilds/releases/tag/sdm710-20260908
+  - name: SourceForge (Archive)
     url: https://sourceforge.net/projects/cakestwix-roms/files/
-  - name: Telegram (jd2019)
+  - name: Telegram
     url: https://t.me/lenovoZ5Sru/
 
 links:
