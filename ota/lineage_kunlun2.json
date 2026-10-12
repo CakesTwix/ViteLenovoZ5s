@@ -1,14 +1,14 @@
 [
   {
-    "datetime": 1784043251,
+    "datetime": 1791659181,
     "type": "UNOFFICIAL",
     "version": "23.2",
     "files": [
       {
-        "filename": "lineage-23.2-20260714-UNOFFICIAL-kunlun2.zip",
-        "sha256": "850f8e0b1ae21b04de247b5dc67502ad57b67ad223a591077c853a0a03b46b15",
-        "size": 1356104272,
-        "url": "https://master.dl.sourceforge.net/project/cakestwix-roms/kunlun2/lineage-23.2-20260714-UNOFFICIAL-kunlun2.zip"
+        "filename": "lineage-23.2-20261010-UNOFFICIAL-kunlun2.zip",
+        "sha256": "7e10b27af3bc7622240603fc6d4a2577640bad568aac6bc92a91530c69ac9fb4",
+        "size": 1356822746,
+        "url": "https://github.com/CakesTwix/LineageOSBuilds/releases/download/sdm710-20261010/lineage-23.2-20261010-UNOFFICIAL-kunlun2.zip"
       }
     ]
   }
